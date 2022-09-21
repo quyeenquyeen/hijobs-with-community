@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link href="./css/styleshome.css" rel="stylesheet" type="text/css">  
+    <link href="./css/slider.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="./js/jquery.validate.min.js "></script>
+    <script>
+        $(document).ready(function() { 
+			$("#form2").validate({        
+				rules: {
+				  fullname: "required",
+                  phone: {
+					required: true,
+					isPhone: true,
+					minlength: 10
+				  },
+				  company : "required",
+				  email: {
+					required: true,
+					email: true
+				  },
+                  message: "required"
+				}, //end rules
+		
+				messages: {
+				  fullname: "Please enter your full name",
+                  company: "Please enter your company",
+                  phone:"Please enter your phone. Exp: 0123 456 789",
+				  email: {
+					required: "Please enter your email. Exp: example@gmail.com",
+					email: "Please enter a valid email"
+				  },
+                  message: "Please enter your messages"
+				} //ens mess
+				
+			}); //end form
+			
+			// kiem tra phone
+			$.validator.addMethod("isPhone", function (value, element) {
+				if ( /^[0-9\-\(\)\/\+\s]*$/g.test(value)) {
+					return true;
+				} else {
+					return false;
+				};
+			}, "Invalid phone number");
+			//kiem tra phone 
+            $(".inputcontact2").on('input', function(){
+                var number=$(this).val().replace(/[^\d]/g,"")
+                if (number.length ==7){
+                    number=number.replace(/(\d{3})(\d{4})/,"$1 $2");
+                } else if (number.length==10){
+                    number=number.replace(/(\d{4})(\d{3})(\d{3})/,"$1 $2 $3");
+                }
+                $(this).val(number)
+            });
+        });
+    </script>
+</head>
+<body>
+    <header class="container-fluid">
+        <nav class="row">
+            <div class="navbar">
+                 <div class="col-lg-2 col-md-2 align-top">
+                     <ul class="ul-navbar-left">
+                         <li class="li-navbar"><a href="loginemployer.html">EMPLOYER</a></li>
+                     </ul>
+                 </div>
+                 <div class="col-lg-2 col-md-2 align-top">
+                     <ul class="ul-navbar-center">
+                         <li class="li-navbar"><a href="Emloyee.html">EMPLOYEE</a></li>
+                     </ul>
+                 </div>
+                 <div class="col-lg-4 col-md-4 mymenu">
+                     <a href=""><img src="./images/mainlogo.png" class="mylogo"></a>
+                     <ul>
+                         <li class="dropdown intro"><a href="#" style="color: black; font-size: 16px; font-weight: 600;"><img class="menu" src="./images/menu.png  "></a>
+                             <div class="dropdown-content">
+                                 <a href="loginemployer.html">EMPLOYER</a>
+                                 <a href="Emloyee.html">EMPLOYEE</a>
+                                 <a href="questionaire.html">QUESTIONNAIRE</a>
+                                 <a href="news.html">NEWS</a>
+                             </div>
+                         </li>
+                     </ul>
+                 </div>
+                 <div class="col-lg-2 col-md-2 align-top">
+                     <ul class="ul-navbar-center">
+                         <li class="li-navbar"><a href="questionaire.html">QUESTIONNAIRE</a></li>
+                     </ul>
+                 </div>
+                 <div class="col-lg-2 col-md-2 align-top">
+                     <ul class="ul-navbar-right">
+                         <li class="li-navbar"><a href="news.html">NEWS</a></li>
+                     </ul>
+                 </div>
+             </div>
+         </nav>
+    </header>
+    <section class="container-fluid">
+        <div class="main-body">
+            <div class="content1">
+                <div class="grleft1">
+                    <h1 class="header">Chào mừng bạn đến với Hi!Jobs</h1>
+                    <h3 class="subheader">Có ngay công việc chỉ bằng vài cú click chuột</h3>
+                    <div class="bg-search">
+                        <input type="text" class="search" placeholder="Chúng tôi có thể giúp được gì cho bạn?">
+                        <button class="searchbtn"><a href="kqtk.html">Tìm</a></button>
+                    </div>
+                </div>
+                <img src="./images/header.png" class="imgheader">
+            </div>
+        </div>
+        <div class="main-body" style="background-color: #f9f9f9;">
+            <div class="content2">
+                <div class="grleft2">
+                    <h3 class="calltoact">Nhà Tuyển Dụng ơi, </h3>
+                    <h3 class="calltoactb">đăng tin trên Hi!Jobs sẽ được miễn phí 30 ngày, bạn đã thử chưa?</h3>
+                </div>
+                <button class="postjobbtn"><a href="loginemployer.html">Post a Job</a></button>
+                <img src="./images/free30days.png" class="imgfree30days">
+            </div>
+        </div>
+        <div class="main-body">
+            <div class="content3">
+                <div class="grleft3">
+                    <h3 class="calltoact">5 bước tạo CV đơn giản </h3>
+                    <h3 class="calltoactb">giúp Ứng Viên tiếp cận gần </h3><h3 class="calltoactb">hơn với Nhà Tuyển Dụng</h3>
+                    <button class="creatcvbtn"><a href="loginemployee.html">Creat CV</a></button>
+                </div>
+                <img src="./images/5steps.png" class="imghdsd">
+            </div>
+        </div>
+        <div class="main-body" style="background-color: #f9f9f9;">
+            <div class="content3">
+                <div class="grleft4">
+                    <h3 class="calltoact">Top công việc</h3>
+                    <h3 class="calltoactb">được tìm kiếm hàng đầu hiện nay</h3>
+                </div>
+                <div class="grright4">
+                    <div class="grright44">
+                        <button class="keywordbtn"><a class="key" href="emloyee_kqtk.html">Web Design</a></button>
+                        <button class="keywordbtn"><a class="key" href="">Travel</a></button>
+                        <button class="keywordbtn"><a class="key" href="">Data Science</a></button>
+                        <button class="keywordbtn2"><a class="key" href="">Technical Engineer</a></button>
+                    </div>
+                    <div class="grright44">
+                        <button class="keywordbtn2"><a class="key" href="">Event Organization</a></button>
+                        <button class="keywordbtn"><a class="key" href="">Developer</a></button>
+                        <button class="keywordbtn"><a class="key" href="">Logistics</a></button>
+                        <button class="keywordbtn"><a class="key" href="">Marketing</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content4">
+            <div class="slider-wrapper" id="slider">
+                <ul class="slider-img">
+                    <li><img src="./images/promotion1.png" alt=""/></li>
+                    <li><img src="./images/promotion2.png" alt=""/></li>
+                    <li><img src="./images/promotion3.png" alt=""/></li>
+                    <li><img src="./images/promotion4.png" alt=""/></li>
+                </ul>
+            </div>
+              <!-- Optional JavaScript -->
+              <!-- jQuery first, then Popper.js, then Bootstrap JS 
+              <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>-->
+              <script>
+                // Determine the total amount of images in the carousel.
+                let sliderCount = $("#slider").find(".slider-img li img").length;
+                // Load images into the carousel
+                let sliderImg = $("#slider").find(".slider-img");
+                // Define the navigation arrows and pagination bullets.
+                let sliderArrow = `<ul class="slider-arrow"><li class="arrow-left" role="button"><i class="fas fa-chevron-left"></i></li><li class="arrow-right" role="button"><i class="fas fa-chevron-right"></i></li></ul>`;
+                let sliderDotLi = "";
+                for (let i = 0; i < sliderCount; i++) {
+                  sliderDotLi += `<li><i class="fas fa-circle"></i></li>`;
+                }
+                let sliderDot = `<ul class="slider-dot">${sliderDotLi}</ul>`;
+                $("#slider").append(sliderArrow + sliderDot);
+          
+                let activeDefaultCount = $(".slider-dot li.active").length;
+                if (activeDefaultCount != 1) {
+                  $(".slider-dot li")
+                    .removeClass()
+                    .eq(0)
+                    .addClass("active");
+                }
+                let sliderIndex = $(".slider-dot li.active").index();
+                sliderImg.css("left", -sliderIndex * 100 + "%");
+          
+                // switch between images
+                function sliderPos() {
+                  sliderImg.css("left", -sliderIndex * 100 + "%");
+                  $(".slider-dot li")
+                    .removeClass()
+                    .eq(sliderIndex)
+                    .addClass("active");
+                }
+          
+                $(".arrow-right").click(function() {
+                  sliderIndex >= sliderCount - 1 ? (sliderIndex = 0) : sliderIndex++;
+                  sliderPos();
+                });
+          
+                $(".arrow-left").click(function() {
+                  sliderIndex <= 0 ? (sliderIndex = sliderCount - 1) : sliderIndex--;
+                  sliderPos();
+                });
+          
+                $(".slider-dot li").click(function() {
+                  sliderIndex = $(this).index();
+                  sliderPos();
+                });
+          
+                let goSlider = setInterval(() => {
+                  $(".arrow-right").click();
+                }, 5000);
+          
+                $("#slider").on({
+                  mouseenter: () => {
+                    clearInterval(goSlider);
+                  },
+                  mouseleave: () => {
+                    goSlider = setInterval(() => {
+                      $(".arrow-right").click();
+                    }, 5000);
+                  }
+                });
+              </script>
+        </div>
+        <div class="content5" >
+            <img src="./images/ABOUT.png" class="imgabout">
+            <div class="aboutus" style="background-color: #EBF9F7;">
+                    <h6 class="header5">SỰ RA ĐỜI CỦA HI!JOBS</h6>
+                    <div class="text">
+                        <p>HI!JOBS cám ơn các bạn đã ghé thăm!</p>
+                        <p>Chúng tôi bắt đầu gia nhập vào thị trường tìm kiếm nhân sự vào năm 2022, trong bối cảnh đại dịch COVID-19 vẫn còn là lý do khiến các Nhà Tuyển Dụng gặp nhiều trăn trở. Sau đại dịch, 
+                        các Doanh Nghiệp lại có nhu cầu tìm kiếm nhân sự cao hơn bao giờ hết vì phần đông nhân sự đã thay đổi cách nhìn về cuộc sống và nhu cầu tìm kiếm công việc của họ cũng thay đổi.</p>
+                        <p>Chính vì lẽ đó, sự ra đời của HI!JOBS một phần giúp cho các Nhà Tuyển Dụng và những Ứng Viên sớm tìm thấy nhau thông qua nguồn CV dồi dào mà HI!JOBS thu thập từ các Ứng Viên. 
+                        Bên cạnh đó còn giúp các bạn trẻ định hướng lại nghề nghiệp cũng như nhu cầu bản thân, nhanh chóng tìm được công việc ổn định lâu dài trên thị trường hiện nay.</p>
+                        <p>Mục tiêu lớn nhất của chúng tôi là giúp các Doanh Nghiệp vượt qua giai đoạn khó khăn sau đại dịch. Việc tìm kiếm CV Ứng Viên trên HI!JOBS dành cho Doanh Nghiệp là hoàn toàn miễn phí.
+                        Các CV của HI!JOBS đều phải trải qua quá trình sàng lọc kỹ càng trước khi tới tay Nhà Tuyển Dụng, để đảm bảo nguồn cung an toàn và chất lượng.</p>
+                        <p>Trang tìm kiếm nhân sự Hi!Jobs vẫn còn đang phát triển, sẽ còn nhiều hạn chế và thiếu sót, chúng tôi rất mong được cảm thông và chia sẻ ý kiến đóng góp giúp chúng tôi cải thiện để ngày càng phát triển hơn.</p>
+                        <p>Trân trọng!</p>
+                    </div>  
+                </div>   
+            </div>
+            <div class="aboutus"> 
+                <h6 class="header55">ĐỘI NGŨ PHÁT TRIỂN</h6>
+                <div class="member">
+                    <div class="vip">
+                        <img src="./images/Star 1.png" class="imgstar">
+                        <p>Ms.Queens</p>
+                        <p>CEO</p>
+                    </div>
+                    <div class="vip">
+                        <img src="./images/Star 2.png" class="imgstar">
+                        <p>Ms.Kaori</p>
+                        <p>CHRO</p>
+                    </div>
+                    <div class="vip">
+                        <img src="./images/Star 3.png" class="imgstar">
+                        <p>Ms.Jenny</p>
+                        <p>CCO</p>
+                    </div>
+                    <div class="vip">
+                        <img src="./images/Star 4.png" class="imgstar">
+                        <p>Ms.Green</p>
+                        <p>CMO</p>
+                    </div>
+                </div>
+            </div>
+            <div class="aboutus" style="padding-top: 0; padding-bottom: 0;">
+                <h6 class="header55">THÀNH TỰU</h6>
+                <div class="member">
+                    <div class="medal">
+                        <img src="./images/top10.png" class="imgstar">
+                        <p class="fit">Top 10 Website tìm kiếm Nhân sự hàng đầu Việt Nam</p>
+                    </div>
+                    <div class="medal">
+                        <img src="./images/cooperation 1.png" class="imgstar">
+                        <p class="fit">Liên kết với hơn 100 Doanh Nghiệp lớn và nhỏ</p>
+                    </div>
+                    <div class="medal">
+                        <img src="./images/medal.png" class="imgstar">
+                        <p class="fit">Được bình chọn giải thưởng Doanh Nghiệp mới triển vọng</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content4">
+            <div class="contact">
+                <div class="address">
+                    <h5 class="headercontact" style="text-decoration: underline; color: #2D63C7;">VĂN PHÒNG ĐẠI DIỆN</h5>
+                    <div class="contactdetail">
+                        <img src="./images/position.png" class="imgposition">
+                        <p class="infocontact">TSA TOWER, 16 LE QUY DON ST., WARD 11, PHU NHUAN DISTRICT, HO CHI MINH CITY, VIET NAM</p>
+                    </div>
+                    <div class="contactdetail">
+                        <img src="./images/mail.png" class="imgcontact">
+                        <p class="infocontact">contact@hijobs.vn</p>
+                    </div>
+                    <div class="contactdetail">
+                        <img src="./images/phone.png" class="imgcontact">
+                        <p class="infocontact">028 3930 1900</p>
+                    </div>
+                    <img src="./images/map.png" class="map">
+                </div>
+                <form action="error.html" id="form2" method="get">
+                    <h5 class="headercontact2">ĐÓNG GÓP Ý KIẾN</h5>
+                    <div class="form-control">
+                        <input type="text" name="fullname" class="inputcontact" placeholder="Your name"></div>
+                    <div class="form-control">
+                        <input type="text" name="company" class="inputcontact" placeholder="Your company"></div>
+                    <div class="form-control">
+                        <input type="email" name="email" class="inputcontact" placeholder="Your email"></div>
+                    <div class="form-control">
+                        <input type="text" name="phone" class="inputcontact2" placeholder="Your phone number"></div>
+                    <div class="form-control">
+                        <textarea name="message" id="" cols="30" rows="4" placeholder="Write your messages"></textarea></div>
+                    <div class="form-control">
+                        <button type="submit" class="contactbtn">Send</button></div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <div id="topcontrol"><img src="./images/top.png" class="backtotop"></div>
+    <script>
+        $(window).scroll(function(){
+        if ($(this).scrollTop() > 100) {
+        $('#topcontrol').css({bottom:"15px"});
+        } else {
+        $('#topcontrol').css({bottom:"-100px"});
+        }
+        });
+        $('#topcontrol').click(function(){
+        $('html, body').animate({scrollTop: '0px'}, 800);
+        return false;
+        });
+    </script>
+    <footer class="container-fluid" style="background-color: #E5E5E5;">
+        <div class="main-footer">
+            <div class="row footer">
+                <div class="col-xl-3 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <img src="./images/mainlogo.png" class="mainlogo">
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 footer-align">
+                     <p class="footertext foot-address">TSA TOWER, 16 LÊ QUÝ ĐÔN, PHƯỜNG 11, QUẬN PHÚ NHUẬN, THÀNH PHỐ HỒ CHÍ MINH</span>
+                     <p class="footertext" style="font-weight: 200;">Copyright &copy; FIGMA</p>
+                     <p class="footertext" style="font-weight: 200;">Liên hệ: 028 - 39301900</p>
+                     <p class="footertext" style="font-weight: 200;">MST: 0023062022</p>
+                     <p class="footertext" style="font-weight: 200;">Cấp ngày: 23/06/2022</p>
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-4 footer-align">
+                     <p class="footertext">VỀ HI!JOBS</p>
+                     <a href=""><p class="footertext" style="font-weight: 200;">Liên hệ</a></p>
+                     <a href=""><p class="footertext" style="font-weight: 200;">Thỏa thuận sử dụng</a></p>
+                     <a href="Emloyee.html"><p class="footertext" style="font-weight: 200;">Cơ hội việc làm</a></p>
+                     <a href=""><p class="footertext" style="font-weight: 200;">Quy định bảo mật</a></p>
+                     <a href=""><p class="footertext" style="font-weight: 200;">Giải quyết khiếu nại</a></p>
+                     <a href="http://play.google.com"><p class="footertext" style="font-weight: 200;">Ứng dụng di động</a></p>
+                 </div>
+                 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-4 footer-align">
+                     <p class="footertext">ỨNG VIÊN</p>
+                     <a href="http://tinhluong.vansu.vn/"><p class="footertext" style="font-weight: 200;">Tính lương gross - net</a></p>
+                     <a href="questionaire.html"><p class="footertext" style="font-weight: 200;">Làm bài test</a></p>
+                     <a href="Emloyee.html"><p class="footertext" style="font-weight: 200;">Tìm kiếm công việc</a></p>
+                     <p class="footertext">NHÀ TUYỂN DỤNG</p>
+                     <a href=""><p class="footertext" style="font-weight: 200;">Tìm kiếm nhân tài</a></p>
+                     <a href="form.html"><p class="footertext" style="font-weight: 200;">Tham gia cùng hi!Jobs</a></p>
+                 </div>
+                 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-4 footer-align">
+                     <p class="footertext">THEO DÕI CHÚNG TÔI TẠI</p>
+                     <a href="http://facebook.com"><img src="./images/fblogo.png" class="imglogo"></a>
+                     <a href="https://www.linkedin.com/"><img src="./images/linkedin.png" class="imglogo"></a>
+                     <a href="http://youtube.com"><img src="./images/youtube.png" class="imglogob"></a>
+                     <p class="footertext">ĐƯỢC CHỨNG NHẬN BỞI</p>
+                     <img src="./images/bocongthuong.png" class="imgbct">
+                 </div>
+             </div>
+        </div>
+    </footer>
+    <script lang="javascript">
+        var __vnp = {code : 16600,key:'', secret : '0c09b00ae2a667d9953615f202b69a94'};
+        (function() {
+            var ga = document.createElement('script');ga.type = 'text/javascript';ga.async=true; ga.defer=true;ga.src = '//core.vchat.vn/code/tracking.js';
+            var s = document.getElementsByTagName('script');
+            s[0].parentNode.insertBefore(ga, s[0]);})();
+    </script>
+    <script src="./bootstrap/js/popper.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

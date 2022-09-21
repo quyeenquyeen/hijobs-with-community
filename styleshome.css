@@ -1,0 +1,310 @@
+* {font-family: 'Oswald'; margin: 0 auto;}
+.navbar {width: 1440px; padding: 50px 120px; position: relative;}
+.ul-navbar-left, .ul-navbar-right, .ul-navbar-center {padding-left: 0; align-self: center; text-align: left;}
+.ul-navbar-right {text-align: right;} .ul-navbar-center {text-align: center;}
+.li-navbar {font-size: 20px; list-style: none;} .mylogo {width: 200px; margin-left: 25%;}
+.dropdown {position: absolute; display: none; top: 15px; right: 2%;}
+.dropdown-content {display: none; position: absolute; z-index: 1; background-color: #ebebeb; border-radius: 5px;
+                   padding: 10px; font-size: 14px; right: 0; margin-top: 25px;}
+.dropdown:hover .dropdown-content {display: block;}
+.menu {width: 22px; position: absolute; right: 0;} .mymenu {display: flex; position: relative;}
+
+a:link {color: black; text-decoration: none;}
+a:visited {color: black;}
+a:hover {color: #ac6700; text-decoration: none;}
+a:active {color: #3775A4;}
+
+@media (max-width: 575.98px) { 
+    .navbar {width: 100%; padding: 5%;}
+    .mylogo {width: 100px; margin-left: 0; position: absolute; left: 3.5%;}
+    .dropdown {display: inline-block; right: 3%; top: 10px;}
+    .ul-navbar-left, .ul-navbar-right, .ul-navbar-center {display: none;}
+ }
+ @media (min-width: 576px) and (max-width: 767.98px) {  
+    .navbar {width: 100%; padding: 4% 5%;}
+    .mylogo {width: 120px; position: absolute; margin-left: 0; left: 2%;}
+    .dropdown {display: inline-block; align-self: center;} .menu {right: 0;}
+    .li-navbar {font-size: 14px;}
+    .ul-navbar-left, .ul-navbar-right, .ul-navbar-center {display: none;}
+}
+@media (min-width: 768px) and (max-width: 991.98px) {  
+    .navbar {width: 100%; padding: 3.5% 5%;}
+    .mylogo {width: 75%;}
+    .li-navbar {font-size: 16px;}
+    .align-top {padding-top: 2%;}
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {  
+    .navbar {width: 100%; padding: 3.5% 5%;}
+    .mylogo {width: 80%;}
+    .li-navbar {font-size: 18px;}  
+}
+@media (min-width: 1200px) and (max-width: 1440px) {  
+    .navbar {width: 100%; padding: 3.5% 5%;}
+    .mylogo { width: 90%;}}
+
+    #topcontrol {width: 50px; height: 50px; margin-left: 95%; opacity: 40%; position: fixed; margin-bottom: 70px;}
+    .backtotop {width: 50px; height: 50px;}
+    #topcontrol:hover {opacity: 80%;}
+    @media only screen and (min-width: 992px) and (max-width: 1199.98px) { 
+        #topcontrol {margin-left: 92%;}  
+    }
+    @media only screen and (max-width: 991px) and (min-width: 768px){
+        #topcontrol, .backtotop {width: 45px; height: 45px;}  #topcontrol {margin-left: 90%;}
+    }
+    @media only screen and (max-width: 767px) and (min-width: 576px){
+        #topcontrol, .backtotop {width: 40px; height: 40px;} #topcontrol {margin-left: 90%;}
+    }
+    @media only screen and (max-width: 575px) and (min-width: 480px){
+        #topcontrol, .backtotop {width: 35px; height: 35px;} #topcontrol {margin-left: 90%;}
+    }
+
+    .main-footer {width: 1440px; height: 350px; margin: 0 auto; padding-top: 50px;}
+    .footer {align-items: center;}
+    .foot-address {width: 239px; margin-left: 0;}
+    .mainlogo {width: 190px;}
+    .footertext {font-size: 18px; margin-bottom: 10px;}
+    .imglogo {margin-right: 20px; margin-bottom: 40px;}
+    .imglogob {margin-right: 0; margin-bottom: 40px;}
+    
+    @media only screen and (max-width: 1460px) and (min-width: 1200px){
+        .main-footer {width: 100%; height: auto; padding-bottom: 50px;}
+        .imglogo {margin-right: 10%;}
+        .mainlogo {width: 180px;} 
+    }
+    @media only screen and (max-width: 1199px) and (min-width: 992px){
+        .main-footer {width: 100%; height: auto; padding-top: 30px; padding-bottom: 30px;}
+        .imglogo {margin-right: 8%;}
+        .mainlogo {margin-bottom: 20px; width: 150px;}
+        .footertext {font-size: 17px;}
+        .foot-address {width: 75%;}
+        .footer {align-items: baseline;}
+    }
+    @media only screen and (max-width: 991px) and (min-width: 768px){
+        .main-footer {width: 100%; height: auto; padding-top: 30px; padding-bottom: 20px;}
+        .mainlogo, .footer-align {margin-bottom: 15px;}
+        .mainlogo {width: 120px;}
+        .foot-address {width: 100%;}
+        .imglogo {margin-right: 7%; margin-bottom: 20px;} .imglogob {margin-bottom: 20px;}
+        .footertext {font-size: 16px; margin-bottom: 7px;}
+        .footer {align-items: baseline;}
+    }
+    @media only screen and (max-width: 767px) and (min-width: 576px){
+        .main-footer {width: 100%; height: auto; padding-top: 20px;}
+        .imglogo {margin-right: 5%; width: 35px; margin-bottom: 20px;} .imglogob {width: 35px; margin-bottom: 20px;}
+        .mainlogo, .footer-align {margin-bottom: 15px;}
+        .mainlogo {width: 110px;}
+        .foot-address {width: 100%;}
+        .footertext {font-size: 15px; margin-bottom: 5px;}
+        .imgbct {width: 135px;}
+        .footer {align-items: baseline;}
+    }
+    @media only screen and (max-width: 575px) and (min-width: 480px){
+        .main-footer {width: 100%; height: auto; padding-top: 20px; padding-bottom: 10px;}
+        .mainlogo, .footer-align {margin-bottom: 10px;}
+        .imglogo, .imglogob {margin-bottom: 10px; width: 32px; margin-right: 5%;}
+        .mainlogo {width: 110px;}
+        .foot-address {width: 100%;}
+        .footertext {font-size: 14px; margin-bottom: 5px;}
+        .imgbct {width: 120px;}
+        .footer {align-items: baseline;}
+        #vnp_chat {right: 20px; width: 80px; height: 80px;}
+        #vnp_eyechat {display: none;}
+    }
+
+.main-body {margin: 0 auto; padding: 50px 120px; font-family: 'Oswald'; height: auto;}
+.content1 {width: 1200px; display: flex; height: auto;}
+.grleft1 {width: 800px; display: inline;}
+.bg-search {width: 750px; height: 87px; background-color:#e6e6e6; display: flex;
+         padding: 0 20px; border-radius: 10px; font-size: 20px; margin-left: 0;}
+.bg-search:hover {filter: drop-shadow(5px 5px 2px rgb(71, 71, 71));}
+.search {width: 624px; height: 50px; font-weight: 100; border: none; margin-top: 18.5px; background-color: #e6e6e6; outline: none;}
+.searchbtn {width: 100px; height: 50px; background-color: #979797; margin-left: 5.04px; font-weight: 400; border-radius: 10px; border: none; margin-top: 18.5px;}
+.header {font-size: 60px; line-height: 90px; color: #2D63C7; width: 800px;}
+.subheader {font-size: 30px; line-height: 45px; margin-bottom: 81px; color: #2D63C7; width: 800px;}
+.imgheader {margin-left: 80px; width: 320px; height: 320px;}
+
+@media only screen and (min-width: 992px) and (max-width: 1440px) {
+    .main-body {width: 100%; padding: 3% 5%; height: auto;}
+    .content1 {width: 100%; height: auto;}
+    .grleft1 {width: 65%; align-self: center;}
+    .bg-search {width: 93.75%; height: 87px; position: relative;}
+    .search {width: 83.2%;}
+    .searchbtn {position: absolute; right: 20px;} 
+    .header {width: 100%; font-size: 44px; font-weight: 600; line-height: 66px;}  .subheader {width: 100%; font-size: 28px; line-height: 42px;}
+    .imgheader {width: 30%; margin-left: 5%; align-self: center;}
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .main-body {width: 100%; padding: 3% 5%; height: auto;}
+    .content1 {width: 100%; height: auto; display: inline-block;}
+    .grleft1 {width: 100%; height: auto;}
+    .bg-search {width: 80%; height: 87px; margin-left: 10%; position: relative;}
+    .search {width: 83.2%;}
+    .searchbtn {border-radius: 8px; position: absolute; right: 15px;} 
+    .header {width: 100%; font-size: 44px; text-align: center; line-height: 60px;}  
+    .subheader {width: 100%; text-align: center; margin-bottom: 40px; font-size: 28px; font-weight: 400; line-height: 42px;}
+    .imgheader {width: 50%; margin-left: 25%; height: auto;}
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .main-body {width: 100%; padding: 4% 5%; height: auto;}
+    .content1 {width: 100%; height: auto; display: inline-block;}
+    .grleft1 {width: 100%; height: auto;}
+    .bg-search {width: 90%; height: 60px; margin-left: 5%; font-size: 16px; border-radius: 5px; position: relative;}
+    .bg-search:hover {filter: drop-shadow(3px 3px 1px rgb(71, 71, 71));}
+    .search {width: 83.2%; margin-top: 5px;}
+    .searchbtn {width: 70px; margin-top: 10px; height: 40px; border-radius: 5px; position: absolute; right: 10px;} 
+    .header {width: 100%; font-size: 34px; text-align: center; line-height: 51px; margin-top: 20px;}  
+    .subheader {width: 100%; text-align: center; margin-bottom: 40px; font-size: 24px; line-height: 36px; font-weight: 400;}
+    .imgheader {display: none;}
+}
+
+.content2 {width: 1200px; display: flex; height: auto; align-items: center;}
+.grleft2 {display: inline;}
+.calltoact {font-size: 30px; width: 500px; font-weight: 600; line-height: 45px;}
+.calltoactb {font-weight: 300; font-size: 30px; width: 500px; line-height: 45px;}
+.postjobbtn, .creatcvbtn {width: 150px; height: 50px; border-radius: 10px; font-size: 20px; border: 2px solid black; margin-left: 100px; font-weight: 500;  background-color: #f9f9f9;}
+.imgfree30days {margin-left: 130px;}
+.creatcvbtn {margin-top: 40px; margin-left: 0; background-color: white;}
+
+.content3 {width: 1200px; display: flex; height: auto; align-items: center;}
+.grleft3, .grleft4 {width: 500px; margin-right: 91px; display: inline;} .grleft4 {margin-right: 92px;}
+.grright44 {display: flex; margin-bottom: 4px;} .grright4 {display: inline;}
+.keywordbtn, .keywordbtn2 {width: 130px; height: 130px; border-radius: 20px; border: none; background-color: #e3e3e3; color: #737373; font-size: 20px; font-weight: 500; margin-right: 6px;}
+.keywordbtn2 {width: 200px;}
+
+.key:link {color: #737373; text-decoration: none;}
+.key:visited {color: #737373;}
+.key:hover {color: black; text-decoration: none;}
+.key:active {color: #3775A4;}
+
+@media only screen and (min-width: 992px) and (max-width: 1440px) {
+    .content2, .content3 {width: 100%;}
+    .calltoact, .calltoactb, .grleft2 {width: 80%; align-self: center; margin-left: 0;} 
+    .calltoactb {font-size: 25px; line-height: 37px; max-width: 410px;}
+    .postjobbtn {width: 20%; margin-left: 5%; margin-top: 0; align-self: center; font-size: 18px;} 
+    .imgfree30days {width: 30%; margin-left: 10%;}
+    .grleft3, .grleft4 {width: 43%; margin-right: 7%; align-self: center;} 
+    .creatcvbtn {width: 30%; font-size: 18px; margin-top: 30px;} 
+    .imghdsd, .grright4 {width: 50%; margin-bottom: 0;}
+    .keywordbtn, .keywordbtn2 {font-weight: 400; border-radius: 15px;}
+}
+@media only screen and (min-width: 768px) and (max-width:991px) {
+    .content2, .content3 {width: 100%;}
+    .calltoact, .calltoactb, .grleft2 {width: 100%; margin-top: 0; align-self: center; font-size: 26px;} 
+    .calltoactb {font-size: 22px; line-height: 33px; max-width: 370px; margin-left: 0;}
+    .postjobbtn {width: 25%; margin-left: 3%; margin-top: 0; align-self: center; font-size: 16px; height: 40px; border: 1px solid black; border-radius: 5px;}
+    .imgfree30days {width: 30%; margin-left: 3%;}
+    .grleft3, .grleft4 {width: 45%; margin-right: 5%; align-items: center;}
+    .creatcvbtn {width: 32%; font-size: 16px; margin-top: 30px; height: 40px; border: 1px solid black; border-radius: 5px;} 
+    .imghdsd, .grright4 {width: 50%;}
+    .keywordbtn, .keywordbtn2 {font-size: 16px; border-radius: 15px; margin-right: 4px; height: 100px; font-weight: 400; border-radius: 10px;}
+}
+@media only screen and (min-width: 480px) and (max-width: 767px){
+    .content2, .content3 {width: 100%; display: inline-block;}
+    .calltoact, .calltoactb, .grleft2 {width: 100%; margin-top: 0; align-self: center; font-size: 24px; text-align: center; line-height: 36px;} 
+    .calltoactb {font-size: 22px; line-height: 33px; max-width: 380px;}
+    .postjobbtn, .creatcvbtn {width: 20%; margin-top: 10px; font-size: 14px; height: 40px; margin-left: 40%; border: 1px solid black; border-radius: 5px;}
+    .imgfree30days {width: 50%; margin-left: 25%;}
+    .grleft3 {width: 100%;}
+    .imghdsd {width: 90%; margin-top: 20px; margin-left: 5%;}
+    .keywordbtn, .keywordbtn2 {font-size: 16px; font-weight: 400; height: 80px; margin-right: 4px; border-radius: 10px; font-weight: 400;}
+    .grright4, .grright44 {width: 90%; margin-left: 5%;} 
+}
+
+.content4 {width: 1440px; padding: 6.9% 0; margin: 0 auto;}
+.carousel-indicators li {text-indent: 0px; text-align: center; color: white; margin-right: 5px; width: 8px; height: 8px; 
+                         border: none; margin-top: -100px; border-radius: 50%; transition: all 800s ease;}
+.carousel-indicators .active, .hover { margin-right: 5px; width: 8px; height: 8px; margin-top: -100px;}
+.carousel-caption { position: initial; margin-bottom: 70px;}
+
+.content5 {width: 1440px; margin: 0 auto; font-family: 'Oswald'; margin-top: -50px;}
+.aboutus {display: flex; width: 1440px; padding: 3.47% 8.3% 3.47% 8.3%; height: auto;}
+.header5 {width: 380px; margin-right: 94px; font-size: 30px; line-height: 45px; font-weight: 500; color: #00457a;}
+.text {width: 726px; height: auto; margin-left: 0; font-size: 20px; line-height: 36px; font-weight: 200; display: inline; text-align: justify; color: #00457a;}
+.member {width: 726px; display: flex;} .imgabout {width: 1440px;}
+.vip, .medal {font-size: 20px; font-weight: 400; margin-right: 15px; width: 175px; height: 272px; text-align: center; line-height: 15px;}
+.medal {width: 242px; height: 300px; line-height: 30px;}
+.imgstar {margin-bottom: 20px;}
+.header55 {width: 380px; margin-right: 94px; font-size: 30px; line-height: 40px; font-weight: 500; margin-top: 110px;}
+@media only screen and (min-width: 992px) and (max-width:1440px) {
+    .content4 {width: 100%; height: auto; padding: 5% 0;}
+    .slide {width: 100%;}
+    .content5, .aboutus, .imgabout {width: 100%; height: auto;} .aboutus {padding-bottom: 0;}
+    .header5 {width: 35%; margin-right: 5%; line-height: 30px;}
+    .text, .member {width: 60%; height: auto; font-size: 18px; line-height: 32px;}
+    .imgstar {width: 100%; max-width: 201px;} .vip, .medal {width: 60%; font-weight: 300; font-size: 18px; line-height: 27px;} .vip {line-height: 12px;}
+    .header55 {margin-top: 0; width: 35%; margin-right: 5%; line-height: 30px;}
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .content4 {width: 100%; padding: 5% 0;}
+    .slide {width: 100%;}
+    .content5, .aboutus, .imgabout {width: 100%; height: auto;} .aboutus {display: inline-block;}
+    .header5 {width: 100%; margin-bottom: 20px; font-size: 26px;}
+    .text {width: 100%; height: auto; font-size: 18px; line-height: 32px;} 
+    .member {width: 100%; height: auto;}
+    .imgstar {width: 100%; max-width: 201px;} .vip, .medal {font-size: 17px; line-height: 17px; height: auto; font-weight: 300;} .medal {font-size: 17px; line-height: 24px;}
+    .header55 {margin-top: 0; width: 100%; margin-bottom: 30px; font-size: 26px;}
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .content4 {width: 100%; padding: 5% 0;}
+    .slide {width: 100%;}
+    .content5, .aboutus, .imgabout {width: 100%; height: auto;} .aboutus {display: inline-block;} 
+    .header5 {width: 100%; margin-bottom: 10px; font-size: 24px;}
+    .text {width: 100%; height: auto; font-size: 16px; line-height: 30px;}
+    .member {width: 100%; height: 100%;}
+    .imgstar {width: 100%;} .vip, .medal {font-size: 16px; line-height: 10px; width: 100%; height: auto; font-weight: 300;} .medal {font-size: 16px; line-height: 24px;}
+    .header55 {margin-top: 0; width: 100%; margin-right: 3%; font-size: 24px; margin-bottom: 10px;}
+    .fit {max-height: 70px; overflow: hidden;}
+}
+
+.contact {display: flex; width: 1200px; height: auto; margin-bottom: 100px;}
+.headercontact, .headercontact2 {font-size: 30px; margin-bottom: 30px; font-weight: 400;}
+.address {width: 550px; margin-right: 70px;} 
+.contactdetail {display: flex; margin-bottom: 7px;} 
+#form2 {width: 580px;} .form-control {width: 580px; padding: 0; border: none; margin-bottom: 20px;}
+.infocontact {font-size: 20px; font-weight: 400; line-height: 40px; width: 493px;}
+.imgcontact {width: 32px; margin-right: 25px; height: 32px;}
+.imgposition {margin-top: 14px; width: 32px; margin-right: 25px; height: 32px;}
+.inputcontact, .inputcontact2, textarea, .contactbtn {width: 580px; height: 50px; border-radius: 10px; font-size: 18px; color: black;
+                 padding: 10px; border: 1px solid #737373; font-weight: 300; outline: none;}
+textarea {height: 188px;} 
+.contactbtn {height: 47px; color: white; background-color: #BE0000; border: none;}
+.contactbtn:hover {filter: drop-shadow(5px 5px 3px rgb(71, 71, 71));}
+
+.acontact:link {color: white; text-decoration: none;}
+.acontact:visited {color: white;}
+.acontact:hover {color: yellow; text-decoration: none;}
+.acontact:active {color: orange;}
+
+
+@media only screen and (min-width: 992px) and (max-width: 1440px) {
+    .contact {width: 95%; height: auto;}
+    .address {width: 45%; margin-right: 5%;} .infocontact {width: 90%;}
+    #form2 {width: 50%;} .form-control {width: 100%;}
+    .infocontact {font-size: 18px; line-height: 27px;}
+    .inputcontact, .inputcontact2, textarea, .contactbtn {width: 100%;} textarea {height: 35%;}
+    .contactbtn:hover {filter: drop-shadow(3px 3px 1px rgb(71, 71, 71));}
+    .map {width: 100%;}
+    .imgcontact, .imgposition {width: 30px; height: 30px;}
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .contact {width: 100%; height: auto; display: inline-block;}
+    .address {width: 100%;} .infocontact {width: 90%; font-size: 18px;} 
+    #form2, .contactdetail {width: 90%; margin-left: 5%;} .form-control {width: 100%;}
+    .headercontact {width: 90%; font-size: 28px;} .headercontact2 {font-size: 28px; margin-bottom: 20px;}
+    .inputcontact, .inputcontact2, textarea, .contactbtn {width: 100%; border-radius: 5px; font-size: 16px;} textarea {height: 50%;}
+    
+    .map {width: 90%; margin-left: 5%; margin-bottom: 40px;}
+    .imgcontact, .imgposition {width: 28px; height: 28px;}
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .contact {width: 100%; height: auto; display: inline-block; }
+    .address {width: 100%;} .infocontact {width: 90%;}
+    #form2, .contactdetail {width: 90%; margin-left: 5%;} .form-control {width: 100%; font-size: 14px; margin-bottom: 15px;}
+    .headercontact {width: 90%; font-size: 26px;} .headercontact2 {font-size: 26px; margin-bottom: 20px;}
+    .infocontact {font-size: 16px; line-height: 24px;}
+    .inputcontact, .inputcontact2, textarea, .contactbtn {width: 100%; font-size: 14px; padding-left: 10px; border-radius: 5px; height: 40px;}
+    .contactbtn:hover {filter: drop-shadow(3px 3px 1px rgb(71, 71, 71));}
+     textarea {height: 100px;}
+    .map {width: 90%; margin-left: 5%; margin-bottom: 40px;}
+    .imgcontact, .imgposition {width: 22px; height: 22px;}
+}
